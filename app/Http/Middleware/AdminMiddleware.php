@@ -22,11 +22,13 @@ class AdminMiddleware
             {
                 return $next($request);
             }
-            else{
+            else
+            {
                 return redirect('/home')->with('status','Access Denied! as you are not an admin');
             }
         }
-        else{
+        else
+        {
             return redirect('/home')->with('/status','Please login first');
         }
     }
